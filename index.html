@@ -1,0 +1,53 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/tetris.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi-sound/4.0.0/pixi-sound.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/pixi-particles@latest/dist/pixi-particles.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <title>Tetris Game</title>
+</head>
+<body>
+  <!-- <script>
+    // Redirect to the welcome page
+    window.location.href = 'welcome.html';
+</script> -->
+  <div id="play-again-display"></div>
+  <div class="game-container">
+    <div class="board-container">
+      <div id ="score-display">
+      </div>
+      <div class="title-container">
+      <h1>TETRIS GAME</h1>
+        <h6>*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-**-*-*-*-*</h6>
+        
+      </div>
+      <div id="game-board"></div>
+      <div id ="game-over-display"> </div>
+    </div>
+   
+    <div class="preview-container">
+      
+      <div>
+      </div>
+      
+      <div id ="level-display">
+      </div>
+      <div id="preview-board"></div>
+      <div id ="pause-display">
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="main.js"></script>
+  <script src="lib/konva.js"></script>
+
+
+  <img src="assets/tetris.png" alt="Icon" class="game-icon">
+</body>
+</html>

@@ -1,0 +1,107 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  background-image: url(assets/images/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#container {
+  width: 800px;
+  height: 600px;
+}
+.game-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 2px; */
+  align-items: center;
+}
+
+.title-container {
+  grid-column: 1 / -1;
+  margin-bottom: 30%;
+  text-align: center;
+}
+
+.title-container h1 {
+  color:white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.title-container h6 {
+  color:white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+#game-board {
+  grid-column: 1;
+  position: relative;
+  border: 5px solid  #94321A;
+  border-radius: 3%;
+}
+
+.preview-container {
+  /* padding-top: 100%; */
+  /* margin-top: -300%; */
+  border: 5px solid  #94321A;
+  /* margin-left: 20%; */
+  border-radius: 3%;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:79%;
+  margin-right: 33%;
+}
+
+#preview-board {
+  
+  /* border: 5px solid black; */
+  border-radius: 5%;
+  margin-bottom: 100%;
+  padding-top: 93%;
+  align-items: center;
+
+}
+
+.game-icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+#score-display {
+  background-color:#031654 ;
+
+  margin-bottom: -60%;
+  border: 5px solid  #94321A;
+  border-radius: 3%;
+}
+#level-display {
+  background-color:#031654 ;
+  /* position: absolute; */
+  border: 5px solid #94321A;
+  border-radius: 3%;
+  margin-top: 16%;
+  align-items: center;
+  
+}
+ #game-over-display {
+  margin-left: -90%;
+  margin-top: -100%;
+ }
+ #pause-display {
+  /* margin-top: -60%; */
+  padding-left: 20%;
+  align-items: center;
+ }
+ #play-again-display{
+  margin-right: 3%;
+ }

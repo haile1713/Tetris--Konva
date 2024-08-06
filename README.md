@@ -34,7 +34,7 @@ This project implements a basic Tetris-like game where players can control tetro
 ## Technologies Used
 
 - JavaScript:Game logic
-- Pixi.js (for graphics rendering)
+- Konva.js (for graphics rendering) 
 - HTML/CSS: Interface and styling
 
 ## Installation

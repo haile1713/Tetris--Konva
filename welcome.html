@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="assets/tetris.png" type="image/x-icon">
+  <title>Tetris</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  /* background-image: url(assets/images/bg1.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    .welcome-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:#01A69D;
+  font-family: 'Silkscreen', cursive;
+  font-size: 2rem;
+}
+
+.arrow-container {
+  margin-top: 1rem;
+  /* background-color: #94321A; */
+}
+
+/* .arrow {
+  border: solid white;
+  border-width: 0 0.5rem 0.5rem 0;
+  display: inline-block;
+  padding: 0.5rem;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+} */
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* Adjust the height of the jump */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.arrow {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-left: 2rem solid transparent; /* Adjust the size */
+  border-right: 2rem solid transparent; /* Adjust the size */
+  border-top: 2rem solid white; /* Arrow color */
+  margin-top: 2rem; /* Space above the arrow */
+  animation: jump 0.5s infinite; /* Keep the jumping animation */
+}
+.container {
+  width: 105px;
+  height: 100px;
+  position: absolute;
+  bottom: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  text-align: center;
+  animation: rotate-move 5s cubic-bezier(.5,0,.5,1) infinite;
+}
+
+.elem {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  margin: 1px;
+  border-radius: 5px;
+}
+
+.elem-1 {
+  background-color: #fc6a21;
+  animation: elem-1-move 5s linear infinite;
+}
+
+.elem-2 {
+  background-color: #f84d30;
+  animation: elem-2-move 5s linear infinite;
+}
+
+.elem-3 {
+  background-color: #f02b57;
+  animation: elem-3-move 5s linear infinite;
+}
+
+.elem-4 {
+  background-color: #ec1879;
+  animation: elem-4-move 5s linear infinite;
+}
+
+@keyframes elem-1-move {
+  5%, 95% {transform: translate(0, 0)}
+  11.6%, 21.6%, 78.2%, 88.2% {transform: translate(-27px, 0px)}
+  28.3%, 38.3%, 61.6%, 71.6% {transform: translate(-27px, 51px)}
+  44.9%, 59.9% {transform: translate(-27px, 51px)}
+}
+
+@keyframes elem-2-move {
+  5%, 95% {transform: translate(0, 0)}
+  11.6%, 21.6%, 78.2%, 88.2% {transform: translate(-27px, 0px)}
+  28.3%, 38.3%, 61.6%, 71.6% {transform: translate(-27px, 0px)}
+  44.9%, 59.9% {transform: translate(25px, 0px)}
+}
+
+@keyframes elem-3-move {
+  5%, 95% {transform: translate(0, 0)}
+  11.6%, 21.6%, 78.2%, 88.2% {transform: translate(25px, 0px)}
+  28.3%, 38.3%, 61.6%, 71.6% {transform: translate(25px, 0px)}
+  44.9%, 59.9% {transform: translate(25px, 0px)}
+}
+
+@keyframes elem-4-move {
+  5%, 95% {transform: translate(0, 0)}
+  11.6%, 21.6%, 78.2%, 88.2% {transform: translate(25px, 0px)}
+  28.3%, 38.3%, 61.6%, 71.6% {transform: translate(25px, 0px)}
+  44.9%, 59.9% {transform: translate(25px, 0px)}
+}
+
+@keyframes rotate-move {
+  15.6%, 17.6%, 48.9%, 50.9%, 82.2%, 84.2% {transform: translate(-50%, -50%) rotate(360deg)}
+  0%, 32.3%, 34.3%, 65.6%, 67.6%, 99% {transform: translate(-50%, -50%) rotate(0)}
+}
+</style>
+<body>
+    <div class="container">
+        <div class="elem elem-1"></div>
+        <div class="elem elem-2"></div>
+        <div class="elem elem-3"></div>
+        <div class="elem elem-4"></div>
+      </div>
+  <div class="welcome-container">
+    <h2>Welcome to My Tetris Game!</h2>
+    <h6>*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-**-*-*-*-*</h6>
+    <!-- <p>Click the arrow to start the game.</p> -->
+    <div class="arrow-container">
+      <a href="index.html" id="start-game">
+        <i class="arrow down"></i>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('start-game').addEventListener('click', () => {
+      // Redirect to the main game page
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
