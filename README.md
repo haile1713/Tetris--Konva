@@ -2,7 +2,7 @@
 
 # Tetris- Game
 
-This is a simple Tetris game implemented in JavaScript using Pixi.js for graphics rendering.This project was developed as part of an internship program at Qene Games. 
+This is a simple Tetris game implemented in JavaScript using Konva.js for graphics rendering.This project was developed as part of an internship program at Qene Games. 
 
 ## Table of Contents
 
